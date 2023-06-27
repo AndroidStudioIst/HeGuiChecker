@@ -3,6 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
+/*
 afterEvaluate {
     publishing {
         publications {
@@ -12,6 +13,7 @@ afterEvaluate {
         }
     }
 }
+*/
 
 android {
     compileSdk 31
@@ -30,3 +32,5 @@ android {
 dependencies {
     implementation 'top.canyie.pine:core:0.2.6'
 }
+
+apply from: "$gradleHost/master/publish.gradle"

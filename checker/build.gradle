@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-afterEvaluate {
+/*afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
@@ -11,7 +11,7 @@ afterEvaluate {
             }
         }
     }
-}
+}*/
 
 android {
     compileSdk 30
@@ -34,3 +34,5 @@ dependencies {
     // need for android 11
     implementation 'com.swift.sandhook:nativehook:4.2.0'
 }
+
+apply from: "$gradleHost/master/publish.gradle"
